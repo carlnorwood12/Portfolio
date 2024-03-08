@@ -1,5 +1,11 @@
 @import url('@pmndrs/branding/styles.css');
 
+/* i am using a variation of dark blue hexs 
+to create a thunder like enviroment that suits 
+the text background video #0b1a54 for most.
+There isnt a specific set of colors its just whatever
+matches the theme */
+
 * {
   box-sizing: border-box;
 }
