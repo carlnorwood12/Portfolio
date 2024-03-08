@@ -1,0 +1,74 @@
+@import url('@pmndrs/branding/styles.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  text-wrap: nowrap;
+}
+h2 {
+  transition: all 0.1s ease-in-out;
+}
+h2:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+body {
+  font-family: 'Inter var', sans-serif;
+  color: white;
+  background-image: url('./blue.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  user-select: none;
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s;
+}
+
+.bg {
+  background-image: url('./blue.jpg');
+}
+
+.fullscreen.ready > div {
+  cursor: pointer;
+}
+
+.fullscreen.clicked {
+  pointer-events: none;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+canvas {
+  opacity: 0;
+  touch-action: none;
+  animation: fade-in 0.5s ease 0.5s forwards;
+}
